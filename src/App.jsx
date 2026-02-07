@@ -10,6 +10,13 @@ const App = () => {
       setTodo('');
     }
 
+  const toggleComplete = (id) => {
+    setTodoList(
+      todoList.map((item) =>
+        item.id === id ? { ...item, completed: !item.completed } : item
+      )
+    );
+  }
   return (
     <div>
       <h1>To-Do list</h1>
@@ -24,7 +31,12 @@ const App = () => {
       </div>
       <ul className="todo-list">
         {todoList.map((item) => (
-          <li key={item.id}>{item.text}</li>
+          <li key={item.id} onClick={()=> toggleComplete(item.id)}
+          style={{
+            cursor: 'pointer',
+            textDecoration: item.completed ? 'line-through' : 'none',
+            color: item.completed ? 'gray' : 'black',
+          }}>{item.text}</li>
         ))}
       </ul>
     </div>
