@@ -15,8 +15,13 @@ const App = () => {
       todoList.map((item) =>
         item.id === id ? { ...item, completed: !item.completed } : item
       )
-    );
+    )
   }
+
+  const deleteTodo = (id) => {
+    setTodoList(todoList.filter((item) => item.id !== id))
+  }
+
   return (
     <div>
       <h1>To-Do list</h1>
@@ -36,7 +41,13 @@ const App = () => {
             cursor: 'pointer',
             textDecoration: item.completed ? 'line-through' : 'none',
             color: item.completed ? 'gray' : 'black',
-          }}>{item.text}</li>
+          }}><span>{item.text}</span>
+          <button className='delete-btn'
+          onClick={(e)=>{
+            e.stopPropagation();
+            deleteTodo(item.id);
+          }}>Delete</button>
+          </li>
         ))}
       </ul>
     </div>
