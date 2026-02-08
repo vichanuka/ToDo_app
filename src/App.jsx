@@ -23,7 +23,7 @@ const App = () => {
   }
 
   return (
-    <div>
+    <div className='app-container'>
       <h1>To-Do list</h1>
       <div className="input-container">
         <input type="text"
