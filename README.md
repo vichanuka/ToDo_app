@@ -1,16 +1,27 @@
-# React + Vite
+📌 Todo Planner with Calendar & Analytics
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern React-based Todo Planner with a calendar, progress analytics, light/dark mode, and inline todo editing. Designed to be interactive, clean, and visually appealing.
 
-Currently, two official plugins are available:
+🛠 Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Add / Delete / Edit Todos: Inline editing for tasks.
+Filters: View All, Active, or Completed tasks.
+Calendar View:
+Navigate previous / next months.
+Highlight today.
+Hover effect for dates.
+Progress Analytics: Circular progress chart showing percentage of completed tasks.
+Theme Toggle: Switch between Light Mode and Dark Mode.
+Local Storage: Todos are saved in browser storage, so they persist on reload.
+Responsive Design: Works well on desktop and mobile devices.
+User-friendly UI: Modern gradients, hover animations, and smooth transitions.
 
-## React Compiler
+⚡ How it Works
 
-The React Compiler is currently not compatible with SWC. See [this issue](https://github.com/vitejs/vite-plugin-react/issues/428) for tracking the progress.
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+Add Tasks: Type in the input field and click Add.
+Edit Tasks: Click the ✏️ icon next to a task, update text, then click 💾 to save.
+Delete Tasks: Click the ✕ button.
+Filter Tasks: Click All, Active, or Completed.
+Calendar Navigation: Click ‹ or › to see previous or next months.
+Theme Toggle: Use the 🌙 / ☀️ button at the top-right to switch themes.
+Analytics Circle: Shows real-time completion percentage of tasks.
